@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+body {
+    background: linear-gradient(90deg, black, pink, purple, vermelho);
+    animation: mudaCor 10s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    color: #4a2c2a;
+}
+
+@keyframes mudaCor {
+    0% { background: black; }
+    50% { background: pink; }
+    100% { background: #cca9dd; }
+    25% { background: darkred; }
+}
+
+.carta {
+    width: 450px;
+    height: 350px;
+    background: url('papel-antigo.jpg') no-repeat center center;
+    background-size: cover;
+    border: 2px solid #8b5a2b;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    cursor: pointer;
+    transform-origin: center;
+    transition: transform 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.frente {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('papel-fechado.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dentro {
+    display: none;
+    text-align: justify;
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(255, 248, 220, 0.9);
+    border-radius: 30px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.conteudo {
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.conteudo::-webkit-scrollbar {
+    width: 5px;
+}
+
+.conteudo::-webkit-scrollbar-thumb {
+    background-color: #8b5a2b;
+    border-radius: 10px;
+}
+
+.fotos img {
+    padding: 20px;
+    border: 2px solid #0ff;
+    width: 350px;
+    margin: auto;
+    background: #222;
+    border-radius: 15px;
+    margin-top: 50px;
+    box-shadow: 0 0 15px #0ff;
+}
+
+.aberta {
+    transform: rotateX(0deg) scale(2);
+    background: #fff;
+    display: block;
+}
+
+.fechada {
+    transform: rotateX(90deg) scale(0.1);
+}
+
+.selo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid purple;
+}
+link[rel="icon"] {
+    border-radius: 50%;
+}
